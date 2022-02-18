@@ -43,7 +43,7 @@ export function Home() {
 
     if (searchText.length > 0) {
       const filteredData = data
-        .filter(password => password.service_name === searchText)
+        .filter(password => password.service_name.includes(searchText))
 
       setSearchListData(filteredData);
     } else {
